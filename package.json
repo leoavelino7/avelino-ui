@@ -10,7 +10,18 @@
     "typecheck": "tsc --project tsconfig.json",
     "format": "prettier --write .",
     "check-format": "prettier --check .",
-    "lint": "eslint src --ext ts,tsx --max-warnings=0"
+    "lint": "eslint src --ext ts,tsx --max-warnings=0",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "yarn lint"
+    ]
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -36,6 +47,8 @@
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-testing-library": "^5.9.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "typescript": "^4.6.4",
     "vite": "^3.2.0"
