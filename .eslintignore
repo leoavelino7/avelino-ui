@@ -1,0 +1,6 @@
+dist
+yarn.lock
+.gitattributes
+.gitignore
+.prettierignore
+coverage
