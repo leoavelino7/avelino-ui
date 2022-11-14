@@ -1,11 +1,15 @@
-import "./App.css"
+import { Input } from "./components"
 
 const App = () => {
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline text-blue-500">
-        Hello world!
-      </h1>
+    <div>
+      <Input mask="cpf" placeholder="cpf" />
+      <Input mask="cnpj" placeholder="cnpj" />
+      <Input mask="cpfOrCnpj" placeholder="cpfOrCnpj" />
+      <Input mask="currency" placeholder="currency" />
+      <Input mask="currency" prefix="R$" placeholder="currency - prefix" />
+      <Input mask="cep" placeholder="cep" />
+      <Input mask="percentage" placeholder="percent" suffix="%" />
     </div>
   )
 }
